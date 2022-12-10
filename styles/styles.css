@@ -465,3 +465,19 @@ main {
         flex-direction: column;
     }
 }
+
+@media(max-height: 676px) {
+    body {
+        grid-template-rows: 100vh;
+        align-items: center;
+    }
+}
+
+@media(max-height: 396px) {
+    #aside__logo {
+        min-height: 100px;
+    }
+    .aside__container a {
+        height: 30px;
+    }
+}
