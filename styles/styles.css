@@ -425,6 +425,9 @@ main {
 }
 
 @media(max-width: 468px) {
+    body {
+        grid-template-rows: 100vh 200px;
+    }
     header {
         grid-template-rows: 30% 1fr;
         grid-template-columns: 100%;
