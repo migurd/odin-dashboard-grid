@@ -41,7 +41,7 @@ h3 {
 }
 
 body {
-    min-width: 468px;
+    min-width: 320px;
     display: grid;
     grid-template-areas: 
     'aside header'
@@ -120,7 +120,7 @@ header {
     display: grid;
     grid-template-rows: 30% 1fr;
     grid-area: header;
-    padding: 15px 30px;
+    padding: 15px 30px 15px;
 	box-shadow: rgba(17, 12, 46, 0.2) 0px 0px 20px 0px;
     font-weight: bold;
     background-color: var(--pure-white);
@@ -426,10 +426,30 @@ main {
 
 @media(max-width: 468px) {
     header {
-        width: 100%;
+        grid-template-rows: 30% 1fr;
+        grid-template-columns: 100%;
     }
+
+    #header__search {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #header__search__input {
+        justify-content: center;
+        width: 100% - 40px;
+        max-width: 100%;
+    }
+
+    #header__search__input input {
+        max-width: 80%;
+    }
+
     aside {
         position: relative;
+    }
+    .aside__container {
+        padding: 5px;
     }
     main {
        display: flex;
@@ -438,7 +458,6 @@ main {
     }
     #container-first__container {
         display: flex;
-       flex-direction: column;
+        flex-direction: column;
     }
-    
 }
